@@ -8,7 +8,7 @@
         "video stream"
     ],
     "website": "https://t.me/dihanofficial",
-    "repository": "https://github.com/dihanofficial/VideoPlayerBot",
+    "repository": "https://github.com/redzone10/VideoPlayerBot",
     "success_url": "https://t.me/dihanofficial",
     "env": {
         "API_ID": {
