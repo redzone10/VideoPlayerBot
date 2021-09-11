@@ -45,7 +45,7 @@ async def vstream(_, m: Message):
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex,query)
         if match:
-            await msg.edit("🎛 **Starting Youtube Streaming...**")
+            await msg.edit("📺 **Starting Youtube Streaming...**")
             try:
                 meta = ydl.extract_info(query, download=False)
                 formats = meta.get('formats', [meta])
@@ -62,7 +62,7 @@ async def vstream(_, m: Message):
                 await group_call.join(chat_id)
                 await group_call.start_video(ytstream, repeat=False)
                 VIDEO_CALL[chat_id] = group_call
-                await msg.edit((f"🎶 **Started [youtube streaming]({ytstream}) !\n\n» join to video chat to watch the youtube stream.**"), disable_web_page_preview=True)
+                await msg.edit((f"📺 **Started [youtube streaming]({ytstream}) !\n\n» join to video chat to watch the youtube stream.**"), disable_web_page_preview=True)
                 try:
                     STREAM.remove(0)
                 except:
@@ -74,7 +74,7 @@ async def vstream(_, m: Message):
             except Exception as e:
                 await msg.edit(f"❌ **Something went wrong!** \n\nError: `{e}`")
         else:
-            await msg.edit("🎚**Starting Live Streaming...**")
+            await msg.edit("📺 **Starting Live Streaming...**")
             livestream = query
             chat_id = m.chat.id
             await sleep(2)
@@ -105,7 +105,7 @@ async def vstream(_, m: Message):
             await group_call.join(chat_id)
             await group_call.start_video(video, repeat=False)
             VIDEO_CALL[chat_id] = group_call
-            await msg.edit("🎚**Video Streaming Started!**\n\n» **join to video chat to watch the video.**")
+            await msg.edit("📺 **Video Streaming Started!**\n\n» **join to video chat to watch the video.**")
             try:
                 STREAM.remove(0)
             except:
