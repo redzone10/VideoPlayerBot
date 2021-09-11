@@ -38,7 +38,7 @@ from pyrogram.errors import MessageNotModified
 async def start(client, message):
    buttons = [
             [
-                InlineKeyboardButton("🛠️sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url=f"https://github.com/dihanofficial/VideoPlayerBot"),
+                InlineKeyboardButton("🛠️sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url=f"https://github.com/kalolonte1"),
                 InlineKeyboardButton("❓ʜᴇʟᴘ&ᴄᴏᴍᴍᴀɴᴅs", callback_data="help"),
             ],
             [
@@ -98,7 +98,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="start":
         buttons = [
             [
-                InlineKeyboardButton("🛠️sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url=f"https://github.com/dihanofficial/VideoPlayerBot"),
+                InlineKeyboardButton("🛠️sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url=f"https://github.com/kalolonte1"),
                 InlineKeyboardButton("❓ʜᴇʟᴘ&ᴄᴏᴍᴍᴀɴᴅs", callback_data="help"),
             ],
             [
